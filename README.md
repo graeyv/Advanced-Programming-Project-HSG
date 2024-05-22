@@ -14,10 +14,18 @@ This file provides a description of the project and is structured as follows:
 - Explanation of Machine Learning Model
 
 ## 1) Demonstration of the Front End of the Web App
-Click on the image below to see the demo. Please do not share the link of the video.
+Click on the image below to see the demo. Please do not share the video or the link to it.
 
 [![Watch the video](http://img.youtube.com/vi/k0ZD0h8pN6M/0.jpg)](https://youtu.be/k0ZD0h8pN6M)
 
+## 2) How to run the code
 
+The code used to scrape the data (NAME), clean the data (NAME) and fit the predictive model (NAME) can be run independently from the code used to create the WebApp.
+
+### 2.1) WebApp
+
+
+
+### 2.2) WebScrapper, 
 
 
