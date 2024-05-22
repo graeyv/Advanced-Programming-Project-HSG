@@ -26,6 +26,9 @@ Click on the image below to see the demo. Please do not share the video or the l
 The code used to scrape the data (NAME), clean the data (NAME) and fit the predictive model (NAME) can be run independently from the code used to create the WebApp.
 
 ### 2.1) WebApp
+In order to run the WebApp, it is important to keep the project files in the correct structure: 
+![image](https://github.com/graeyv/Advanced-Programming-Project-HSG/assets/161760200/48aaf3a7-c5ed-4e14-a34b-1790df104efe)
+
 
 
 
