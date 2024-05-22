@@ -43,17 +43,18 @@ TO BE COMPLETED
 ## 3) Description of all files
 ### 3.1) data
 #### 3.1.1) adr_data_clean.csv
+This is a .csv file containing the addresses of all buildings in Switzerland with the corresponding long/lat coordinates. As mentioned above the one in the repo is simply an example, the real .csv would need to run the app. 
 #### 3.1.2) dat_clean.csv
+This is the cleaned .csv file of the scraped data from immoscout24.ch. Each observation represents one property. (MAYBE SHORT DESCRIPTION OF VARS?)
 ### 3.2) model
 #### 3.2.1) best_random_forest_model.pkl
+This is a pickle file which contains the trained random forest model that is loaded into the app to make a prediction of the user's property price based on his/her input. The real file must be generated using the code (NAME) as the file in the repo is just a placeholder. 
 #### 3.2.2) feature_columns.pkl 
+This pickle file simply contains the variables which are actually used to train the model. For simplicity not all scraped data has been integrated into the WebApp and the predictive model. 
 ### 3.3) static
+This folder contains all images (.png) which are used in the WebApp such as the avatars, the logo and name of the App, as well as the picture on the 'contact us' page.
 ### 3.4) templates
-#### 3.4.1) about.html
-#### 3.4.2) analytics.html
-#### 3.4.3) base.html
-#### 3.4.4) contact.html
-#### 3.4.5) property.html
+This folder contains the different HTML codes for the front end of the 4 pages of the WebApp (property.html, analytics.html, about.html, contact.html). It also contains the base.html which provides a common template for other HTML files in the project. For example, this is where the style-sheet is imported or the menu-bar is created.
 ### 3.5) app.py
 ### 3.6) dash_app.py
 
