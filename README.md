@@ -40,7 +40,7 @@ TO BE COMPLETED
 
 ### 2.3) ETC...
 
-## 3) Description of all files
+## 3) Description of all folders/files
 ### 3.1) data
 #### 3.1.1) adr_data_clean.csv
 This is a .csv file containing the addresses of all buildings in Switzerland with the corresponding long/lat coordinates. As mentioned above the one in the repo is simply an example, the real .csv would need to run the app. 
