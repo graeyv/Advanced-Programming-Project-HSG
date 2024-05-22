@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<h1>Our Project</h1>
+<p>
+    This prototype webapplication has been created for the class 'Skills: Programming with Advanced Computer Languages' at the University of St. Gallen. 
+    The entire project can be broken down into three main parts:
+  <ul>
+    <li>A Webscrapper to pull information about real estate listings from Immoscout24.ch using the Scrapy framework</li>
+    <li>A Random Forest trained on the scraped listings to predict a property price based on user input using scikit-learn</li>
+    <li>The Webapplication you are seeing right now which has been programmed using the Flask and Dash frameworks</li>
+  </ul>
+    The data utilized in this project has been scraped in April 2024. To be fit for modelling and the implementation into the webApp, the data has been cleaned along the process.
+</p>
+
+<h2>Meet the Team</h2>
+<div style="display: flex; justify-content: space-around; text-align: center;">
+  <div>
+    <img src="{{ url_for('static', filename='avatar1.png') }}" alt="Avatar 1" width="150" height="150">
+    <p style="font-size: 1.5em; font-weight: bold;">Jonas</p>
+  </div>
+  <div>
+    <img src="{{ url_for('static', filename='avatar2.png') }}" alt="Avatar 2" width="150" height="150">
+    <p style="font-size: 1.5em; font-weight: bold;">Yves</p>
+  </div>
+  <div>
+    <img src="{{ url_for('static', filename='avatar3.png') }}" alt="Avatar 3" width="150" height="150">
+    <p style="font-size: 1.5em; font-weight: bold;">Marc</p>
+  </div>
+</div>
+{% endblock %}

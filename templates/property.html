@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% block title %}Property{% endblock %}
+{% block content %}
+<h5>Please enter your property information below:</h5>
+
+{% if message %}
+    <div class="alert alert-success">{{ message }}</div>
+{% endif %}
+
+<form method="POST" action="/property">
+    <h3>Characteristics</h3>
+    <div class="form-group">
+        <label for="living_area">Living area (m²):</label>
+        <input type="number" step="0.1" min=0 max=1000 class="form-control" id="living_area" name="living_area" value="{{ data.get('living_area', '') }}" required>
+    </div>
+
+    <div class="form-group">
+        <label for="construction_year">Construction Year:</label>
+        <input type="number" min=1700 max=2030 class="form-control" id="construction_year" name="construction_year" value="{{ data.get('construction_year', '') }}" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Balkon">Balcony:</label>
+        <select class="form-control" id="Balkon" name="Balkon">
+            <option value="Yes" {% if data.get('Balkon') == 'Yes' %}selected{% endif %}>Yes</option>
+            <option value="No" {% if data.get('Balkon') == 'No' %}selected{% endif %}>No</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Garage">Garage:</label>
+        <select class="form-control" id="Garage" name="Garage">
+            <option value="Yes" {% if data.get('Garage') == 'Yes' %}selected{% endif %}>Yes</option>
+            <option value="No" {% if data.get('Garage') == 'No' %}selected{% endif %}>No</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Parkplatz">Parking:</label>
+        <select class="form-control" id="Parkplatz" name="Parkplatz">
+            <option value="Yes" {% if data.get('Parkplatz') == 'Yes' %}selected{% endif %}>Yes</option>
+            <option value="No" {% if data.get('Parkplatz') == 'No' %}selected{% endif %}>No</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Neubau">Newly built:</label>
+        <select class="form-control" id="Neubau" name="Neubau">
+            <option value="Yes" {% if data.get('Neubau') == 'Yes' %}selected{% endif %}>Yes</option>
+            <option value="No" {% if data.get('Neubau') == 'No' %}selected{% endif %}>No</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Swimmingpool">Swimming Pool:</label>
+        <select class="form-control" id="Swimmingpool" name="Swimmingpool">
+            <option value="Yes" {% if data.get('Swimmingpool') == 'Yes' %}selected{% endif %}>Yes</option>
+            <option value="No" {% if data.get('Swimmingpool') == 'No' %}selected{% endif %}>No</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Lift">Elevator:</label>
+        <select class="form-control" id="Lift" name="Lift">
+            <option value="Yes" {% if data.get('Lift') == 'Yes' %}selected{% endif %}>Yes</option>
+            <option value="No" {% if data.get('Lift') == 'No' %}selected{% endif %}>No</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Aussicht">View:</label>
+        <select class="form-control" id="Aussicht" name="Aussicht">
+            <option value="Yes" {% if data.get('Aussicht') == 'Yes' %}selected{% endif %}>Yes</option>
+            <option value="No" {% if data.get('Aussicht') == 'No' %}selected{% endif %}>No</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Cheminée">Fireplace:</label>
+        <select class="form-control" id="Cheminée" name="Cheminée">
+            <option value="Yes" {% if data.get('Cheminée') == 'Yes' %}selected{% endif %}>Yes</option>
+            <option value="No" {% if data.get('Cheminée') == 'No' %}selected{% endif %}>No</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Rollstuhlgängig">Wheelchair Accessible:</label>
+        <select class="form-control" id="Rollstuhlgängig" name="Rollstuhlgängig">
+            <option value="Yes" {% if data.get('Rollstuhlgängig') == 'Yes' %}selected{% endif %}>Yes</option>
+            <option value="No" {% if data.get('Rollstuhlgängig') == 'No' %}selected{% endif %}>No</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Kinderfreundlich">Child Friendly:</label>
+        <select class="form-control" id="Kinderfreundlich" name="Kinderfreundlich">
+            <option value="Yes" {% if data.get('Kinderfreundlich') == 'Yes' %}selected{% endif %}>Yes</option>
+            <option value="No" {% if data.get('Kinderfreundlich') == 'No' %}selected{% endif %}>No</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Kabel-TV">Cable TV:</label>
+        <select class="form-control" id="Kabel-TV" name="Kabel-TV">
+            <option value="Yes" {% if data.get('Kabel-TV') == 'Yes' %}selected{% endif %}>Yes</option>
+            <option value="No" {% if data.get('Kabel-TV') == 'No' %}selected{% endif %}>No</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Minergie Bauweise">Minergie Construction:</label>
+        <select class="form-control" id="Minergie Bauweise" name="Minergie Bauweise">
+            <option value="Yes" {% if data.get('Minergie Bauweise') == 'Yes' %}selected{% endif %}>Yes</option>
+            <option value="No" {% if data.get('Minergie Bauweise') == 'No' %}selected{% endif %}>No</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Minergie zertifiziert">Minergie Certified:</label>
+        <select class="form-control" id="Minergie zertifiziert" name="Minergie zertifiziert">
+            <option value="Yes" {% if data.get('Minergie zertifiziert') == 'Yes' %}selected{% endif %}>Yes</option>
+            <option value="No" {% if data.get('Minergie zertifiziert') == 'No' %}selected{% endif %}>No</option>
+        </select>
+    </div>
+
+    <h3>Location</h3>
+    <h5>(Please enter the exact address)</h5>
+    <div class="form-group">
+        <label for="PLZ_only">Zip:</label>
+        <input type="text" class="form-control" id="PLZ_only" name="PLZ_only" value="{{ data.get('PLZ_only', '') }}" required>
+    </div>
+
+    <div class="form-group">
+        <label for="place">Place:</label>
+        <input type="text" class="form-control" id="place" name="place" value="{{ data.get('place', '') }}" required>
+    </div>
+
+    <div class="form-group">
+        <label for="street">Street:</label>
+        <input type="text" class="form-control" id="street" name="street" value="{{ data.get('street', '') }}" required>
+    </div>
+
+    <div class="form-group">
+        <label for="nr">Nr:</label>
+        <input type="text" class="form-control" id="nr" name="nr" value="{{ data.get('nr', '') }}" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary float-right">Save</button>
+</form>
+{% endblock %}
