@@ -14,8 +14,10 @@ This file provides a description of the project and is structured as follows:
 - Explanation of Machine Learning Model
 
 ## 1) Demonstration of the Front End of the Web App
-Click below to see the demo. Please do not share the link of the video.
+Click on the image below to see the demo. Please do not share the link of the video.
 
-[![Watch the video](https://github.com/yourusername/yourrepository/blob/main/custom_thumbnail_with_play_button.jpg)](https://youtu.be/k0ZD0h8pN6M)
+[![Watch the video](http://img.youtube.com/vi/k0ZD0h8pN6M/0.jpg)](https://youtu.be/k0ZD0h8pN6M)
+
+
 
 
