@@ -14,4 +14,5 @@ This file provides a description of the project and is structured as follows:
 - Explanation of Machine Learning Model
 
 ## 1) Demonstration of the Front End of the Web App
-[![Watch the video]([http://www.youtube.com/watch?v=abcdefghijk](https://youtu.be/k0ZD0h8pN6M))
+[![Watch the video](http://img.youtube.com/vi/k0ZD0h8pN6M/0.jpg)](https://youtu.be/k0ZD0h8pN6M)
+
