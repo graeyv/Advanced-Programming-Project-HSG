@@ -42,8 +42,8 @@ TO BE COMPLETED
 
 ## 3) Description of all files
 ### 3.1) data
-#### 3.1.1) 
-#### 3.1.2) 
+#### 3.1.1) adr_data_clean.csv
+#### 3.1.2) dat_clean.csv
 ### 3.2) model
 #### 3.2.1) best_random_forest_model.pkl
 #### 3.2.2) feature_columns.pkl 
@@ -54,6 +54,8 @@ TO BE COMPLETED
 #### 3.4.3) base.html
 #### 3.4.4) contact.html
 #### 3.4.5) property.html
+### 3.5) app.py
+### 3.6) dash_app.py
 
 
 
