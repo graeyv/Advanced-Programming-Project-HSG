@@ -13,6 +13,9 @@ This file provides a description of the project and is structured as follows:
 - Explanation of Web Scraper & Data Cleaning
 - Explanation of Machine Learning Model
 
+## Disclaimer
+This project has been realized with the help of online sources such as https://stackoverflow.com/ and with the help of OpenAIs' LLM ChatGPT 4. 
+
 ## 1) Demonstration of the Front End of the Web App
 Click on the image below to see the demo. Please do not share the video or the link to it.
 
