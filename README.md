@@ -21,7 +21,7 @@ Click on the image below to see the demo. Please do not share the video or the l
 
 ## 2) How to run the code
 
-The code used to scrape the data (NAME), clean the data (NAME) and fit the predictive model (NAME) can be run independently from the code used to create the WebApp.
+The code used to scrape the data (immo_crawler.py), clean the data (NAME) and fit the predictive model (NAME) can be run independently from the code used to create the WebApp.
 
 ### 2.1) Web App
 In order to run the WebApp, it is important to keep the project files in the correct structure: 
@@ -35,8 +35,9 @@ Moreover, it is important to download all the necessary packages which are impor
 
 ![image](https://github.com/graeyv/Advanced-Programming-Project-HSG/assets/161760200/62a31850-8933-4c95-8cc1-b7985e011839)
 
-### 2.2) WebScrapper
-TO BE COMPLETED
+### 2.2) Web Scraper
+
+To scrape data from immoscout24.ch use the Scrapy spider in immo_crawler.py. The spider will crawl immoscout24.ch based on the specified filters and extract the data. Change the parameters flat_house, rent_buy, place_lvl, and place to customize the search criteria as needed. The collected data will be saved in a CSV file in the same directory. 
 
 ### 2.3) ETC...
 
@@ -102,7 +103,11 @@ Key Functions and Features:
 
 This file is essential for creating interactive and visually appealing components that display property data and analytics within the web application.
 
-### 3.7) Etc.
+### 3.7) data_generation
+#### 3.7.1) web_scraper
+##### 3.7.1.1) immo_crawler.py
+
+This Scrapy spider extracts data from immoscout24.ch based on specified filters. It accesses each listing and extracts all relevant information for all results matching the specified filters. The extracted information is stored in a .csv file. The spider is configured to respect robots.txt and includes a download delay to avoid being blocked by the website.
 
 
 
