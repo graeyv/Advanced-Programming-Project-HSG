@@ -14,7 +14,7 @@ This file provides a description of the project and is structured as follows:
 ## Disclaimer
 This project has been realized with the help of online sources such as https://stackoverflow.com/ and with the help of OpenAIs' LLM ChatGPT 4 (https://chatgpt.com/). Moreover, images and logos used in the WebApp have been created using AI tools such as [looka.com](https://looka.com/)).
 
-## 1) Webb App Demo
+## 1) Web App Demo
 Click on the image below to see the demo. Please do not share the video or the link to it.
 
 [![Watch the video](http://img.youtube.com/vi/k0ZD0h8pN6M/0.jpg)](https://youtu.be/k0ZD0h8pN6M)
@@ -23,7 +23,7 @@ Click on the image below to see the demo. Please do not share the video or the l
 
 The code used to scrape the data (NAME), clean the data (NAME) and fit the predictive model (NAME) can be run independently from the code used to create the WebApp.
 
-### 2.1) WebApp
+### 2.1) Web App
 In order to run the WebApp, it is important to keep the project files in the correct structure: 
 ![image](https://github.com/graeyv/Advanced-Programming-Project-HSG/assets/161760200/48aaf3a7-c5ed-4e14-a34b-1790df104efe)
 
