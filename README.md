@@ -21,7 +21,7 @@ Click on the image below to see the demo. Please do not share the video or the l
 
 ## 2) How to run the code
 
-The code used to scrape the data (immo_crawler.py), clean the data (NAME) and fit the predictive model (NAME) can be run independently from the code used to create the WebApp.
+The code used to scrape the data (immo_crawler.py), clean the data (NAME) and fit the predictive model (immo_random_forest.py) can be run independently from the code used to create the WebApp.
 
 ### 2.1) Web App
 In order to run the WebApp, it is important to keep the project files in the correct structure: 
@@ -29,7 +29,7 @@ In order to run the WebApp, it is important to keep the project files in the cor
 
 The Repository is currently organized in this way. However, due to a restriction of the file sizes two placeholders (adr_data_clean_EXAMPLE.csv & best_random_forest_model_PLACEHOLDER.pkl.txt) have been added to the Repo instead of the correct files. These should be replaced and renamed accordingly (adr_data_clean_EXAMPLE.csv & best_random_forest_model_PLACEHOLDER.pkl):
 - The correct .csv file of the Swiss addresses register can be downladed from https://www.swisstopo.admin.ch/de/amtliches-verzeichnis-der-gebaeudeadressen
-- The correct .pkl file can directly be generated directly using the (NAME) script.
+- The correct .pkl file can directly be generated directly using the (immo_random_forest.py) script.
 
 Moreover, it is important to download all the necessary packages which are imported at the top of the respective scripts. Once this is all done, the WebAPP can be started by running the app.py script. Clicking on the link appearing in the console output will open the App in the default browser of your machine: 
 
@@ -39,7 +39,11 @@ Moreover, it is important to download all the necessary packages which are impor
 
 To scrape data from immoscout24.ch use the Scrapy spider in immo_crawler.py. The spider will crawl immoscout24.ch based on the specified filters and extract the data. Change the parameters flat_house, rent_buy, place_lvl, and place to customize the search criteria as needed. The collected data will be saved in a CSV file in the same directory. 
 
-### 2.3) ETC...
+### 2.3) Predictive Model: Random Forest
+
+The script immo_random_forest.py trains a Random Forest model to predict house prices based on various features. The trained model is saved as best_random_forest_model.pkl and the feature columns are saved as feature_columns.pkl for future use in the web application.
+
+### 2.4) ETC...
 
 ## 3) Description of all folders/files
 ### 3.1) data
@@ -108,6 +112,11 @@ This file is essential for creating interactive and visually appealing component
 ##### 3.7.1.1) immo_crawler.py
 
 This Scrapy spider extracts data from immoscout24.ch based on specified filters. It accesses each listing and extracts all relevant information for all results matching the specified filters. The extracted information is stored in a .csv file. The spider is configured to respect robots.txt and includes a download delay to avoid being blocked by the website.
+
+### 3.8) immo_random_forest.py
+
+The script trains a Random Forest to predict prices with the scraped data from immoscout24.ch. The script uses RandomizedSearchCV to find the best hyperparameters for the Random Forest Regressor. 
+
 
 
 
