@@ -46,7 +46,7 @@ The script immo_random_forest.py trains a Random Forest model to predict house p
 
 ### 2.4) Data Cleaning
 
-The data_cleaning.py script can simply be run - you just need to make sure that all files are uploaded correctly. This program has a long runtime (approx. 30 minutes), but it does not necessarily have to be run, as the output file (dat_clean.csv) is also already provided.
+The data_cleaning.py script can simply be run - you just need to make sure that all files are loaded correctly. This program has a long runtime (approx. 30 minutes), but it does not necessarily have to be run, as the output file (dat_clean.csv) is also already provided.
 
 ## 3) Description of all folders/files
 ### 3.1) data
