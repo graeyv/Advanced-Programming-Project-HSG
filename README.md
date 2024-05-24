@@ -121,23 +121,7 @@ The crawler is configured to respect robots.txt and includes a download delay to
 
 The script trains a Random Forest model to predict housing prices using the data scraped from immoscout24.ch. It employs RandomizedSearchCV to optimize the hyperparameters for the Random Forest Regressor.
 
-The predictor variables used in the model are:
-
-living_area
-Balkon
-Garage
-Parkplatz
-Neubau
-Swimmingpool
-Lift
-Aussicht
-Cheminée
-Rollstuhlgängig
-Kinderfreundlich
-Kabel-TV
-Minergie Bauweise
-Minergie zertifiziert
-PLZ_only
+The predictor variables used in the model are: 'living_area', 'Balkon', 'Garage', 'Parkplatz', 'Neubau', 'Swimmingpool', 'Lift', 'Aussicht', 'Cheminée', 'Rollstuhlgängig', 'Kinderfreundlich', 'Kabel-TV', 'Minergie Bauweise', 'Minergie zertifiziert', 'PLZ_only'.
 
 To simplify user input, other available variables in the scraped data are not used.
 
