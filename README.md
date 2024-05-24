@@ -53,7 +53,7 @@ This is a .csv file containing the addresses of all buildings in Switzerland wit
 This is the cleaned .csv file of the scraped data from immoscout24.ch. Each observation represents one property. (MAYBE SHORT DESCRIPTION OF VARS?). This data is used to (i) train the ML model and (ii) to populate the data visualizations in the WebApp. 
 ### 3.2) model
 #### 3.2.1) best_random_forest_model.pkl
-This is a pickle file which contains the trained random forest model that is loaded into the app to make a prediction of the user's property price based on his/her input. The real file must be generated using the code (NAME) as the file in the repo is just a placeholder. 
+This is a pickle file which contains the trained random forest model that is loaded into the app to make a prediction of the user's property price based on his/her input. The real file must be generated using the code (immo_random_forest.py) as the file in the repo is just a placeholder. 
 #### 3.2.2) feature_columns.pkl 
 This pickle file simply contains the variables which are actually used to train the model. For simplicity not all scraped data has been integrated into the WebApp and the predictive model. 
 ### 3.3) static
@@ -111,11 +111,37 @@ This file is essential for creating interactive and visually appealing component
 #### 3.7.1) web_scraper
 ##### 3.7.1.1) immo_crawler.py
 
-This Scrapy spider extracts data from immoscout24.ch based on specified filters. It accesses each listing and extracts all relevant information for all results matching the specified filters. The extracted information is stored in a .csv file. The spider is configured to respect robots.txt and includes a download delay to avoid being blocked by the website.
+This Scrapy spider extracts data from immoscout24.ch based on specified filters. It accesses each listing and extracts all relevant information for all results matching the specified filters. The extracted information is stored in a .csv file.
+
+In addition to the price and address of each listing, the spider collects all information from the "Hauptangaben" (main details) and "Eigenschaften" (features) sections. The website displays a maximum of 1,000 listings per search query, so for large cantons with many listings, multiple queries may be required. The crawler could be further improved to handle this limitation.
+
+The crawler is configured to respect robots.txt and includes a download delay to avoid being blocked by the website.
 
 ### 3.8) immo_random_forest.py
 
-The script trains a Random Forest to predict prices with the scraped data from immoscout24.ch. The script uses RandomizedSearchCV to find the best hyperparameters for the Random Forest Regressor. 
+The script trains a Random Forest model to predict housing prices using the data scraped from immoscout24.ch. It employs RandomizedSearchCV to optimize the hyperparameters for the Random Forest Regressor.
+
+The predictor variables used in the model are:
+
+living_area
+Balkon
+Garage
+Parkplatz
+Neubau
+Swimmingpool
+Lift
+Aussicht
+Cheminée
+Rollstuhlgängig
+Kinderfreundlich
+Kabel-TV
+Minergie Bauweise
+Minergie zertifiziert
+PLZ_only
+
+To simplify user input, other available variables in the scraped data are not used.
+
+When evaluating the model on a test set, it achieves a mean absolute error (MAE) of approximately CHF 250,000 and an R² value of 0.6.
 
 
 
