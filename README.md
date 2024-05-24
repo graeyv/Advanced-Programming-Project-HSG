@@ -21,7 +21,7 @@ Click on the image below to see the demo. Please do not share the video or the l
 
 ## 2) How to run the code
 
-The code used to scrape the data (immo_crawler.py), clean the data (NAME) and fit the predictive model (immo_random_forest.py) can be run independently from the code used to create the WebApp.
+The code used to scrape the data (immo_crawler.py), clean the data (data_cleaning.py) and fit the predictive model (immo_random_forest.py) can be run independently from the code used to create the WebApp.
 
 ### 2.1) Web App
 In order to run the WebApp, it is important to keep the project files in the correct structure (Please note that ONLY the files in the below picture are needed to make the Web App runing): 
@@ -44,7 +44,9 @@ To scrape data from immoscout24.ch use the Scrapy spider in immo_crawler.py. The
 
 The script immo_random_forest.py trains a Random Forest model to predict house prices based on various features. The trained model is saved as best_random_forest_model.pkl and the feature columns are saved as feature_columns.pkl for future use in the web application.
 
-### 2.4) ETC...
+### 2.4) Data Cleaning
+
+The data_cleaning.py script can simply be run - you just need to make sure that all files are uploaded correctly. This program has a long runtime (approx. 30 minutes), but it does not necessarily have to be run, as the output file (dat_clean.csv) is also already provided.
 
 ## 3) Description of all folders/files
 ### 3.1) data
