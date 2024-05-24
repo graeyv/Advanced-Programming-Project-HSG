@@ -125,19 +125,19 @@ This Python file is used to clean the raw data from the web_scraper.
 
 All files were first loaded from the “raw_data_immoscout” folder and then checked for correctness and completeness. In the course of the process, assumptions had to be made as the data did not exactly match the data on the website - the documentation of these assumptions can also be found in this file. Additionally, information that was not required was removed and new information that was important for the model was included from other sources (see folder “additional_data”). 
 
-The output of this file is the dat_clean.csv. file, which was used both for our model and for the dash_app. 
+The output of this file is the dat_clean.csv. file, which was used both for the model and for the dash_app. 
 
 ##### 3.7.2.2) dat_clean.csv
 
-This is the output file of the data cleanings and serves as the base for the model and the dash app. In short, this data includes all addresses, prices, property age, region type and features of the apartments. 
+This is the output file of the data cleanings and serves as the base for the model and the dash_app. In short, this data includes all addresses, prices, living areas, property ages, region types and other features of the apartments. 
 
 ##### 3.7.2.3) raw_data_immoscout
 
-This folder contains the raw data of the web_scraper. It consists of 59 different csv. files, which are divided according to canton and type of search. 
+This folder contains the raw data from the web_scraper. It consists of 59 different csv. files, which are divided according to canton and type of search. 
 
 ##### 3.7.2.4) additional_data
 
-This folder contains all additional data that was used in addition to the data originating from the scraper. The data was used to check the correctness of the addresses and provided information regarding the categorization of the ZIPs into a location category. 
+This folder contains all additional data that was used in addition to the data originating from the web_scraper. The data was used to check the correctness of the addresses and provided information regarding the categorization of the ZIPs into a location category. 
 
 ### 3.8) immo_random_forest.py
 
