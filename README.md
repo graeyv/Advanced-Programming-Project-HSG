@@ -24,7 +24,8 @@ Click on the image below to see the demo. Please do not share the video or the l
 The code used to scrape the data (immo_crawler.py), clean the data (NAME) and fit the predictive model (immo_random_forest.py) can be run independently from the code used to create the WebApp.
 
 ### 2.1) Web App
-In order to run the WebApp, it is important to keep the project files in the correct structure (Please note that only the files in the below picture are needed to make the Web App runing): 
+In order to run the WebApp, it is important to keep the project files in the correct structure (Please note that ONLY the files in the below picture are needed to make the Web App runing): 
+
 ![image](https://github.com/graeyv/Advanced-Programming-Project-HSG/assets/161760200/48aaf3a7-c5ed-4e14-a34b-1790df104efe)
 
 The Repository is currently organized in this way. However, due to a restriction of the file sizes two placeholders (adr_data_clean_EXAMPLE.csv & best_random_forest_model_PLACEHOLDER.pkl.txt) have been added to the Repo instead of the correct files. These should be replaced and renamed accordingly (adr_data_clean_EXAMPLE.csv & best_random_forest_model_PLACEHOLDER.pkl):
