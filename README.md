@@ -118,6 +118,27 @@ In addition to the price and address of each listing, the spider collects all in
 
 The crawler is configured to respect robots.txt and includes a download delay to avoid being blocked by the website.
 
+#### 3.7.2) data_cleaning
+##### 3.7.2.1) data_cleaning.py
+
+This Python file is used to clean the raw data from the web_scraper. 
+
+All files were first loaded from the “raw_data_immoscout” folder and then checked for correctness and completeness. In the course of the process, assumptions had to be made as the data did not exactly match the data on the website - the documentation of these assumptions can also be found in this file. Additionally, information that was not required was removed and new information that was important for the model was included from other sources (see folder “additional_data”). 
+
+The output of this file is the dat_clean.csv. file, which was used both for our model and for the dash_app. 
+
+##### 3.7.2.2) dat_clean.csv
+
+This is the output file of the data cleanings and serves as the base for the model and the dash app. In short, this data includes all addresses, prices, property age, region type and features of the apartments. 
+
+##### 3.7.2.3) raw_data_immoscout
+
+This folder contains the raw data of the web_scraper. It consists of 59 different csv. files, which are divided according to canton and type of search. 
+
+##### 3.7.2.4) additional_data
+
+This folder contains all additional data that was used in addition to the data originating from the scraper. The data was used to check the correctness of the addresses and provided information regarding the categorization of the ZIPs into a location category. 
+
 ### 3.8) immo_random_forest.py
 
 The script trains a Random Forest model to predict housing prices using the data scraped from immoscout24.ch. It employs RandomizedSearchCV to optimize the hyperparameters for the Random Forest Regressor.
